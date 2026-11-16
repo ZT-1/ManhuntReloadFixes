@@ -49,7 +49,7 @@ identical across all the level `allanims.ifp` files, and the logic is hard-coded
 The 6-shooter is the only victim in vanilla data because it's the only other RELOAD_LOOP weapon.
 A mod that gives another weapon `RELOAD_LOOP` would be affected the same way.
 
-Manhunt 2 has the same bug at different addresses. This repo only covers Manhunt 1.
+Manhunt 2 has the same bug at different addresses. The Manhunt 2 version is in its own repo: [Manhunt2RevolverReloadFix](https://github.com/ZT-1/Manhunt2RevolverReloadFix).
 
 ## The fix
 
