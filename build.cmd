@@ -1,5 +1,5 @@
 @echo off
-rem Rebuilds RevolverFlickFix.asi. Needs nothing but Visual Studio.
+rem Rebuilds ReloadFixes.asi and copies ReloadFixes.ini next to it. Needs nothing but Visual Studio.
 setlocal
 cd /d "%~dp0"
 
@@ -13,8 +13,9 @@ call "%VCVARS%" >nul
 if not exist bin mkdir bin
 
 cl /nologo /LD /O2 /MT /GS- /W3 /EHsc /D_CRT_SECURE_NO_WARNINGS ^
-   /Fo:bin\ /Fe:bin\RevolverFlickFix.asi src\dllmain.cpp /link /SUBSYSTEM:WINDOWS
+   /Fo:bin\ /Fe:bin\ReloadFixes.asi src\dllmain.cpp /link /SUBSYSTEM:WINDOWS
 
 if errorlevel 1 exit /b 1
+copy /y ReloadFixes.ini bin\ReloadFixes.ini >nul
 echo.
-echo Built bin\RevolverFlickFix.asi
+echo Built bin\ReloadFixes.asi
