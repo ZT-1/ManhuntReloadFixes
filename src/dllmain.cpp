@@ -1,5 +1,5 @@
 // ReloadFixes.asi - Manhunt 1 PC (Steam). Fixes four vanilla reload bugs. Each one can be turned
-// on or off in ReloadFixes.ini (next to the .asi). All are on if the .ini is missing.
+// on or off in ReloadFixes.ini (next to the .asi). All are on (and logging off) if the .ini is missing.
 //
 // The revolver and shotgun bugs come from the same per-ped flag: CPed+0x33C bit 0x40, "this looped reload started
 // with rounds still loaded, so cut the reload anim when RELOAD_LOOP ends". It lets a partial
@@ -326,7 +326,7 @@ namespace
 
     void Install()
     {
-        g_log = ReadOption("Log", true);
+        g_log = ReadOption("Log", false);
         g_revolverFlick    = ReadOption("RevolverFlick", true);
         g_sniperLastCasing = ReadOption("SniperLastCasing", true);
         g_shotgunLastShell = ReadOption("ShotgunLastShell", true);

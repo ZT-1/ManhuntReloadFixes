@@ -18,9 +18,10 @@ This repo is source only, with no prebuilt binary. Build it first (see Build bel
    plugins already work for you, you have one.
 2. Copy the built `bin\ReloadFixes.asi` and `bin\ReloadFixes.ini` into the game's `scripts\`
    folder.
-3. Start the game. `reloadfixes_asi.log` appears in the game folder with one `patched` line per
-   enabled fix. `ABORT:` means the exe wasn't the expected version and that fix wasn't applied.
-   To uninstall, delete the `.asi`.
+3. Start the game. To uninstall, delete the `.asi`. Logging is off by default. To check that the
+   fixes applied, set `Log=1` in the `.ini`: `reloadfixes_asi.log` then appears in the game
+   folder with one `patched` line per enabled fix. Problems are always logged: `ABORT:` means the
+   exe wasn't the expected version and that fix wasn't applied.
 
 If you used the older `RevolverFlickFix.asi`, delete it. This plugin replaces it.
 
@@ -37,12 +38,12 @@ SniperLastCasing=1
 ShotgunLastShell=1
 
 [General]
-Log=1
+Log=0
 ```
 
-`1` turns an option on and `0` turns it off. Changes take effect on the next game start. With
-`Log=0` the log is only written when something goes wrong. If the `.ini` is missing, everything
-is on.
+`1` turns an option on and `0` turns it off. Changes take effect on the next game start.
+`Log=0` (the default) only writes the log when something goes wrong; `Log=1` writes it on every
+start. If the `.ini` is missing, all four fixes are on and logging is off.
 
 ## The shared cause
 
