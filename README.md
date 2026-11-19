@@ -175,8 +175,8 @@ your Visual Studio is in a different place.
 
 ## Manhunt 2
 
-Manhunt 2 has the revolver bug at different addresses. The Manhunt 2 version is in its own repo:
-[Manhunt2RevolverReloadFix](https://github.com/ZT-1/Manhunt2RevolverReloadFix).
+Manhunt 2 has the same four bugs at different addresses. The Manhunt 2 version, with the same options, is in its own repo:
+[Manhunt2ReloadFixes](https://github.com/ZT-1/Manhunt2ReloadFixes).
 
 ## Confirmed in game
 
